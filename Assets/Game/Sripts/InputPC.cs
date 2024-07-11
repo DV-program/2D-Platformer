@@ -2,7 +2,7 @@
 using UnityEngine;
 namespace Assets.Game.Sripts
 {
-    public class InputPC : MonoBehaviour, IInput
+    public class InputPC : IInput
     {
         public Vector2 InputRegister()
         {

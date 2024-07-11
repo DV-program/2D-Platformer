@@ -11,7 +11,9 @@ namespace Assets.Game.Sripts
 			Health health = playerModel.GetComponent<Health>();
 			health.Initialize(healthPoint);
 			MoveEnemy moveEnemy = playerModel.GetComponent<MoveEnemy>();
+			moveEnemy.Initialize();
 			PlayerAnimationController controller = playerModel.GetComponent<PlayerAnimationController>();
+			controller.Initialize();
 			_player = new(moveEnemy, controller);	
 		}
 	}

@@ -8,12 +8,13 @@ public class Player
 {
 	private IMovablePlayer _move;
 	private PlayerAnimationController _controller;
-	private Dictionary<Type,IPlayerBehavior> _behavioursMap = new();
+	private Dictionary<Type,IPlayerBehavior> _behavioursMap;
 	private IPlayerBehavior _currentBehavior;
 	public Player(IMovablePlayer move, PlayerAnimationController controller)
 	{
 		_move = move;
 		_controller = controller;
+		_behavioursMap = new();
 		_controller.StayChangedToIdle += SetPlayerIdle;
 		_controller.StayChangedToActive += SetPlayerActive;
 		_controller.Disabled += Disable;
@@ -34,7 +35,8 @@ public class Player
 	public void SetPlayerIdle() => SetBehavior(_behavioursMap[typeof(PlayerIdle)]);
 	private void Disable()
 	{
-        _controller.StayChangedToIdle -= SetPlayerIdle;
-        _controller.StayChangedToActive -= SetPlayerActive;
-    }
+		_controller.StayChangedToIdle -= SetPlayerIdle;
+		_controller.StayChangedToActive -= SetPlayerActive;
+		_controller.Disabled -= Disable;
+	}
 }
