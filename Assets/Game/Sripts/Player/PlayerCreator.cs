@@ -6,12 +6,13 @@ namespace Assets.Game.Sripts
 	public class PlayerCreator
 	{
 		private Player _player;
-		public PlayerCreator(GameObject playerModel, int healthPoint, IMovablePlayer move)
+		public PlayerCreator(GameObject playerModel, int healthPoint)
 		{
 			Health health = playerModel.GetComponent<Health>();
 			health.Initialize(healthPoint);
+			MoveEnemy moveEnemy = playerModel.GetComponent<MoveEnemy>();
 			PlayerAnimationController controller = playerModel.GetComponent<PlayerAnimationController>();
-			_player = new(move, controller);	
+			_player = new(moveEnemy, controller);	
 		}
 	}
 }

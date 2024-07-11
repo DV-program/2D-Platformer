@@ -1,3 +1,4 @@
+using Assets.Game.Interfaces;
 using Assets.Game.Sripts;
 using UnityEngine;
 
@@ -13,10 +14,12 @@ public class Bootstrap : MonoBehaviour
 	private CameraFollower _cameraFollower;
 	private PlayerCreator _playerCreator;
 
-    private void Awake()
+	private void Awake()
 	{
-		MoveEnemy moveEnemy = _playerPrefab.GetComponent<MoveEnemy>();
-		_playerCreator = new(_playerPrefab, _healthPoint, moveEnemy);
+		InputPC inputPC = new();
+		UpdateProvider updateProvider = GetComponent<UpdateProvider>();
+		updateProvider.Initialize(inputPC);
+		_playerCreator = new(_playerPrefab, _healthPoint);
 		_cameraFollower = new(_playerPrefab.transform, _cameraPrefab.transform, _offcet, _smothing);
 	}
 	private void OnDisable()
