@@ -1,14 +1,13 @@
-﻿using Assets.Game.Interfaces;
-using Assets.Game.Sripts.Interfaces;
-using UnityEngine;
-namespace Assets.Game.Sripts
+﻿using UnityEngine;
+using Assets.Game.Sripts.Health;
+namespace Assets.Game.Sripts.Player
 {
 	public class PlayerCreator
 	{
 		private Player _player;
 		public PlayerCreator(GameObject playerModel, int healthPoint)
 		{
-			Health health = playerModel.GetComponent<Health>();
+			HealthEnemy health = playerModel.GetComponent<HealthEnemy>();
 			health.Initialize(healthPoint);
 			MoveEnemy moveEnemy = playerModel.GetComponent<MoveEnemy>();
 			moveEnemy.Initialize();

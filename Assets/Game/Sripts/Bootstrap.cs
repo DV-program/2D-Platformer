@@ -1,5 +1,6 @@
 using Assets.Game.Interfaces;
 using Assets.Game.Sripts;
+using Assets.Game.Sripts.Player;
 using UnityEngine;
 
 public class Bootstrap : MonoBehaviour

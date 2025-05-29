@@ -8743,6 +8743,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Text (TMP)
       objectReference: {fileID: 0}
+    - target: {fileID: 6318499147241002040, guid: f781fab9ae0cc35439bdddb225d8ecdd, type: 3}
+      propertyPath: _maxCount
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

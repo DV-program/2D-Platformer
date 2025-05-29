@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Assets.Game.Sripts
+namespace Assets.Game.Sripts.Health
 {
 	public class HealthView : MonoBehaviour
 	{

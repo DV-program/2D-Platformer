@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine;
 
-namespace Assets.Game.Sripts
+namespace Assets.Game.Sripts.Player
 {
 	public class PlayerAnimationController : MonoBehaviour
 	{
