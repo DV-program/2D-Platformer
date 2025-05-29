@@ -59,5 +59,6 @@ namespace Assets.Game.Sripts.Player
 		}
 		private void OnOutDoor() => StayChangedToActive?.Invoke();
 		private void LevelRestarted() => EventBus.Instance.LevelRestarting?.Invoke();
+		private void NextLevelStarted() => EventBus.Instance.NextLevelStarting?.Invoke();
 	}
 }

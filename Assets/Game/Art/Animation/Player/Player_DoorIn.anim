@@ -92,7 +92,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 1.1666666
-    functionName: LevelRestarted
+    functionName: NextLevelStarted
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

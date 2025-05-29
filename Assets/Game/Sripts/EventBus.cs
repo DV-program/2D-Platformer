@@ -29,5 +29,6 @@ namespace Assets.Game.Sripts
         public Action PlayerEntering;
         // Level
         public Action LevelRestarting;
+        public Action NextLevelStarting;
     }
 }
