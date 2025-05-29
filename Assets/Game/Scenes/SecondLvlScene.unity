@@ -720,7 +720,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4315d913f7be740459503afa9e4c9869, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneName: 
+  nextSceneName: ThirdLvlScene
 --- !u!1001 &614195822
 PrefabInstance:
   m_ObjectHideFlags: 0
