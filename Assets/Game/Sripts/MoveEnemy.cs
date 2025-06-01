@@ -21,7 +21,7 @@ namespace Assets.Game.Sripts
 			if (_isGrounded && inputDirection.y == 1) 
 				_rbEnemy.velocity = new Vector2(_rbEnemy.velocity.x, _jumpVelocity); 
 		}
-		public void Initialize()
+		public void Initialize()	
 		{
 			_enemyTransform = GetComponent<Transform>();
 			_rbEnemy = GetComponent<Rigidbody2D>();
